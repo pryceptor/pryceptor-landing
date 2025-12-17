@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pryceptor – FERPA-Compliant Analytics for Community Colleges</title>
+
+  <!-- Tailwind Play CDN (no build step) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50:  '#eef7ff',
+              100: '#d9ecff',
+              200: '#b9dcff',
+              300: '#8ec6ff',
+              400: '#5da9ff',
+              500: '#2a84ff',
+              600: '#1f66db',
+              700: '#1c51af',
+              800: '#1a458d',
+              900: '#183b74',
+            }
+          },
+          boxShadow: {
+            glow: '0 0 40px rgba(45, 156, 219, 0.25)',
+          },
+          backgroundImage: {
+            'hero-gradient': 'radial-gradient(60% 60% at 50% 0%, rgba(45,156,219,0.25) 0%, rgba(45,156,219,0) 60%), linear-gradient(180deg, #0b1220 0%, #0c1323 100%)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Cookie Consent CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+
+  <!-- Meta -->
+  <meta name="description" content="Pryceptor builds FERPA-compliant, custom ML and analytics for community colleges." />
+</head>
+
+<body class="h-full bg-[#0c1323] text-white">
+
+  <!-- Sticky Nav -->
+  <header class="sticky top-0 z-50 backdrop-blur bg-[#0c1323]/70 border-b border-white/10">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="#" class="flex items-center gap-2">
+          <div class="h-7 w-7 rounded-full bg-brand-500 shadow-glow"></div>
+          <span class="font-semibold tracking-wide">Pryceptor</span>
+        </a>
+
+        <nav class="hidden md:flex items-center gap-8 text-sm">
+          <a href="#home" class="hover:text-brand-200 transition">Home</a>
+
+          <div class="relative group">
+            <button class="inline-flex items-center gap-1 hover:text-brand-200 transition">
+              About Us
+              <svg class="h-4 w-4 opacity-70" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.18l3.71-3.95a.75.75 0 111.08 1.04l-4.24 4.51a.75.75 0 01-1.08 0L5.21 8.27a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
+            </button>
+            <div class="absolute -left-4 mt-3 w-56 rounded-lg border border-white/10 bg-[#0f182d] p-2 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition">
+              <a href="#vision" class="block rounded-md px-3 py-2 hover:bg-white/5">Our Vision</a>
+              <a href="#praeceptors" class="block rounded-md px-3 py-2 hover:bg-white/5">Our Praeceptors</a>
+            </div>
+          </div>
+
+          <a href="#audit" class="hover:text-brand-200 transition">Book Consultation</a>
+        </nav>
+
+        <a href="#audit" class="hidden md:inline-flex items-center rounded-md bg-brand-500 px-4 py-2 text-sm font-semibold hover:bg-brand-400 transition shadow-glow">
+          Book Consultation
+        </a>
+
+        <!-- Mobile menu button -->
+        <button id="mobileMenuBtn" class="md:hidden inline-flex items-center justify-center rounded-md p-2 hover:bg-white/10">
+          <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+
+      <!-- Mobile menu -->
+      <div id="mobileMenu" class="md:hidden hidden pb-4">
+        <a href="#home" class="block rounded-md px-3 py-2 hover:bg-white/5">Home</a>
+        <a href="#vision" class="block rounded-md px-3 py-2 hover:bg-white/5">Our Vision</a>
+        <a href="#praeceptors" class="block rounded-md px-3 py-2 hover:bg-white/5">Our Praeceptors</a>
+        <a href="#audit" class="block rounded-md px-3 py-2 hover:bg-white/5">Book Consultation</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="home" class="bg-hero-gradient">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20">
+      <div class="max-w-3xl">
+        <h1 class="text-4xl sm:text-5xl font-extrabold leading-tight tracking-tight">
+          Unlock FERPA-Compliant Intelligence for Your Campus
+        </h1>
+        <p class="mt-6 text-lg text-white/80 max-w-2xl">
+          Custom-built machine learning and analytics solutions that reveal actionable insights—without breaking privacy laws.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="newsletter.html" class="inline-flex items-center rounded-md bg-brand-500 px-6 py-3 font-semibold hover:bg-brand-400 transition shadow-glow">
+            Sign Up For Our Free Newsletter
+          </a>
+          <a href="#vision" class="inline-flex items-center rounded-md border border-white/20 px-6 py-3 hover:bg-white/5 transition">
+            Learn More
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="relative">
+    <div class="absolute inset-0 -z-10 opacity-30 blur-3xl" style="background: radial-gradient(40% 40% at 20% 0%, rgba(45,156,219,.25), transparent 60%);"></div>
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
+      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div class="rounded-2xl border border-white/10 bg-[#0f182d] p-6 hover:bg-white/[.04] transition">
+          <h3 class="text-lg font-semibold">🔐 100% FERPA Compliant</h3>
+          <p class="mt-2 text-white/80">Designed from the ground up to protect student and employee privacy without sacrificing insight.</p>
+        </div>
+        <div class="rounded-2xl border border-white/10 bg-[#0f182d] p-6 hover:bg-white/[.04] transition">
+          <h3 class="text-lg font-semibold">📊 Custom Machine Learning</h3>
+          <p class="mt-2 text-white/80">Tailored models built to fit your institution’s specific goals and challenges.</p>
+        </div>
+        <div class="rounded-2xl border border-white/10 bg-[#0f182d] p-6 hover:bg-white/[.04] transition">
+          <h3 class="text-lg font-semibold">📈 Proven Results</h3>
+          <p class="mt-2 text-white/80">14% retention increase in one semester at our pilot schools — without outsourcing your data.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OUR VISION (copy kept EXACT) -->
+  <section id="vision" class="border-t border-white/10">
+    <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-16">
+      <h2 class="text-3xl font-bold mb-6">Our Vision</h2>
+      <div class="prose prose-invert max-w-none">
+        <p>Our name, <strong>Pryceptor</strong>, is inspired by <em>Philip Melanchthon</em>—a quiet but formidable scholar of the Reformation, known as the <strong>Praeceptor Germaniae</strong> (“Teacher of Germany”). Without Melanchthon, there would be no Martin Luther. He was the genius behind the curtain, the researcher, the scholar, the analyst, if you will, providing the tools and insights to start a revolution.</p><br>
+        <p>Like Melanchthon, we believe in supporting decision-makers from behind the scenes—with research, truth, and customized intelligence that allows others to shine in the spotlight. We aren’t here for the credit; we are here for the outcomes.</p><br>
+        <p>We design hands-on, FERPA-compliant machine learning, AI, and analytics solutions that empower community colleges to act boldly on the truth hidden in their data. Real insight can’t come from one-size-fits-all dashboards; and privacy cannot be an afterthought.</p><br>
+        <p>We don’t sell templates. We architect solutions, align with compliance, and walk quietly behind the decision-makers we empower.</p><br>
+        <p>Our work is quiet. But the impact speaks volumes.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- OUR PRAECEPTORS (copy kept EXACT) -->
+  <section id="praeceptors" class="border-t border-white/10 bg-[#0f182d]">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
+      <h2 class="text-3xl font-bold mb-10">Our Praeceptors</h2>
+
+      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div class="rounded-2xl border border-white/10 bg-[#0b1220] p-6 hover:bg-white/[.03] transition">
+          <div class="flex items-center gap-4">
+            <img src="https://via.placeholder.com/100" alt="" class="h-16 w-16 rounded-full object-cover" />
+            <div>
+              <h5 class="font-semibold">Aaron Slemp</h5>
+              <p class="text-sm text-white/70">Chief Data Scientist</p>
+            </div>
+          </div>
+          <p class="mt-4 text-white/80">Expert in FERPA-compliant ML and AI Modeling that leads to institutional transformation. 
+	   Aaron has spent a decade building data pipelines and dashboards for higher ed enrollment 
+           and retention impact. His work spans everything from advanced statistical analysis, to data analytics, 
+           to end-to-end creation, deployment, and monitoring of Machine Learning solutions.
+           He always seeks to develop actionable intel from each project that results in higher retention, persistence, and completion,
+           all motivated by his passion to see each student finish what they start, whether that's a single class, a cert,
+           or a full degree.</p>
+        </div>
+
+        <div class="rounded-2xl border border-white/10 bg-[#0b1220] p-6 hover:bg-white/[.03] transition">
+          <div class="flex items-center gap-4">
+            <img src="https://via.placeholder.com/100" alt="" class="h-16 w-16 rounded-full object-cover" />
+            <div>
+              <h5 class="font-semibold">Dr. Tom Nevill</h5>
+              <p class="text-sm text-white/70">Chief Academic Officer</p>
+            </div>
+          </div>
+          <p class="mt-4 text-white/80">Dr. Nevill has spent over two decades leading community colleges to greater heights. He is known for his exuberant and transformative
+           leadership. His greatest strengths arise from his ability to connect with new clients and their staff so that he can quickly 
+	   ascertain the root causes and immediately begin working on concrete solutions that produce tangible results. He has worked in all
+           phases of higher education as a tenured professor, dean, and Academic Vice President. He has led data teams at multiple colleges,
+           spearheading their focus, projects, and outcomes.</p>
+        </div>
+
+        <div class="rounded-2xl border border-white/10 bg-[#0b1220] p-6 hover:bg-white/[.03] transition">
+          <div class="flex items-center gap-4">
+            <img src="https://via.placeholder.com/100" alt="Maria Chan" class="h-16 w-16 rounded-full object-cover" />
+            <div>
+              <h5 class="font-semibold">Maria Chan</h5>
+              <p class="text-sm text-white/70">ML Engineer & Privacy Officer</p>
+            </div>
+          </div>
+          <p class="mt-4 text-white/80">Architect of secure modeling infrastructure across community college systems.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AUDIT FORM -->
+  <section id="audit" class="border-t border-white/10">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
+      <div class="max-w-2xl mx-auto text-center">
+        <h2 class="text-3xl font-bold mb-6">Book Your Free Consultation</h2>
+        <form action="https://formspree.io/f/xvgqvdgy" method="POST" class="grid gap-4 text-left">
+          <div>
+            <label class="block text-sm text-white/80 mb-1">Full Name</label>
+            <input type="text" name="name" required class="w-full rounded-md bg-white/5 border border-white/10 px-3 py-2 placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-brand-400">
+          </div>
+          <div>
+            <label class="block text-sm text-white/80 mb-1">Institutional Email</label>
+            <input type="email" name="email" required class="w-full rounded-md bg-white/5 border border-white/10 px-3 py-2 placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-brand-400">
+          </div>
+          <div>
+            <label class="block text-sm text-white/80 mb-1">What would you like us to know?</label>
+            <textarea name="message" rows="4" class="w-full rounded-md bg-white/5 border border-white/10 px-3 py-2 placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-brand-400"></textarea>
+          </div>
+          <button type="submit" class="inline-flex justify-center rounded-md bg-brand-500 px-6 py-3 font-semibold hover:bg-brand-400 transition shadow-glow">
+            Request Consultation
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-white/10">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8 text-sm text-white/70 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p>© 2025 Pryceptor. All rights reserved.</p>
+      <div class="flex items-center gap-6">
+        <a href="privacy.html" class="hover:text-white">Privacy</a>
+        <a href="#audit" class="hover:text-white">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile menu toggle -->
+  <script>
+    const btn = document.getElementById('mobileMenuBtn');
+    const menu = document.getElementById('mobileMenu');
+    btn?.addEventListener('click', () => menu.classList.toggle('hidden'));
+  </script>
+
+  <!-- Google Analytics (replace G-XXXXXXX) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXX');
+  </script>
+
+  <!-- Cookie Consent -->
+  <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
+  <script>
+    window.addEventListener("load", function(){
+      window.cookieconsent.initialise({
+        palette: {
+          popup: { background: "#0b1220" },
+          button: { background: "#2a84ff" }
+        },
+        theme: "classic",
+        content: {
+          message: "We use cookies to improve your site experience and comply with privacy laws.",
+          dismiss: "Got it!",
+          link: "Learn more",
+          href: "privacy.html"
+        }
+      });
+    });
+  </script>
+</body>
+</html>
